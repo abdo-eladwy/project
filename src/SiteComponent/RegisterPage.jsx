@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 
@@ -17,7 +18,7 @@ export default function RegisterPage() {
         <button className="  text-white ">Sign Up</button>
         <div className="  d-flex flex-column  flex-md-row  gap-md-3">
           <p>Already have an account?</p>
-          <a href="#" >Sign in</a>
+          <Link to='/'>Sign in</Link>
         </div>
       </div>
     </div>
