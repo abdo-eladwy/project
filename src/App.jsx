@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route,Link } from "react-router-dom";
 import "./SiteComponent/RegisterPage.css";
 import LoginPage from "./SiteComponent/LoginPage";
 import RegisterPage from "./SiteComponent/RegisterPage";
+import HomePage from "./SiteComponent/HomePAge";
 
 export default function App() {
   return (
@@ -15,8 +16,12 @@ export default function App() {
     <div>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<LoginPage />} />
-        <Route path="/Register" element={<RegisterPage />} />
+        <Route path="/">
+          <Route index element={<LoginPage />} />
+          <Route path="/Register" element={<RegisterPage />} />
+          <Route path="*" element={<h1>404 page Not Found</h1>} />
+          <Route path="/home" element={<HomePage/>}/>
+        </Route>
       </Routes>
     </BrowserRouter>
   </div>
